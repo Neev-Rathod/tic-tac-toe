@@ -31,7 +31,9 @@ connectDb();
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/game", gameRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Welcome to the Tic Tac Toe API");
+});
 // Socket.IO handling
 socketHandler(io);
 
