@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useGame } from "../context/GameContext";
 import GameBoard from "../components/GameBoard";
 import GameStatus from "../components/GameStatus";
 import Chat from "./Chat";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { X, MessageCircle } from "lucide-react";
 
 const GameRoom = () => {
   const { roomCode: urlRoomCode } = useParams();

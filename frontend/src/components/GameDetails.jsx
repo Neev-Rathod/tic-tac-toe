@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 const GameDetails = ({ game }) => {
   const [showDetails, setShowDetails] = useState(false);
 

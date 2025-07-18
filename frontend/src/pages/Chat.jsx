@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useGame } from "../context/GameContext";
 import { useAuth } from "../context/AuthContext";
 import { Send, X, Users } from "lucide-react";
