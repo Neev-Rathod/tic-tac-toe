@@ -154,7 +154,7 @@ export const GameProvider = ({ children, socket }) => {
       await axios.post(
         `${import.meta.env.VITE_API_URL}/api/game/save`,
         {
-          opponent,
+          opponent: opponent,
           result: gameResult.result,
           steps: gameResult.moves,
           winner: gameResult.winner,

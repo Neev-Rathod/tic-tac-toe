@@ -3,8 +3,6 @@ const { checkWinner, isBoardFull } = require("../utils/gameLogic");
 
 const socketHandler = (io) => {
   io.on("connection", (socket) => {
-    console.log("User connected:", socket.id);
-
     socket.on("createRoom", ({ username, allowedUsers }, callback) => {
       const roomCode = createRoom(username, allowedUsers);
       socket.join(roomCode);
@@ -122,9 +120,7 @@ const socketHandler = (io) => {
       io.to(roomCode).emit("newMessage", messageData);
     });
 
-    socket.on("disconnect", () => {
-      console.log("User disconnected:", socket.id);
-    });
+    socket.on("disconnect", () => {});
   });
 };
 
